@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Part1Activity"
+    android:layout_margin="50dp">
+
+    <ImageView
+        android:id="@+id/btnBackToMain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/baseline_chevron_left_24"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/part1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBackToMain1"
+        android:text="@string/part_1"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/setFieldSize1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/part1_title"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/fieldTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_field_dimensions"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/setWidth1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fieldTitle1"
+            android:hint="@string/width"
+            android:ems="7"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/setHeight1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fieldTitle1"
+            android:layout_alignParentEnd="true"
+            android:ems="7"
+            android:hint="@string/height"
+            android:inputType="number"
+            android:autofillHints="" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setCarPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setFieldSize1">
+
+        <TextView
+            android:id="@+id/positionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_car_s_starting_point"
+            android:textStyle="bold"
+            android:textSize="20sp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/xPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitle"
+            android:hint="@string/x_position"
+            android:ems="5"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/yPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitle"
+            android:layout_toEndOf="@id/xPosition"
+            android:layout_toStartOf="@id/direction"
+            android:ems="5"
+            android:hint="@string/y_position"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <Spinner
+            android:id="@+id/direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitle"
+            android:layout_alignBottom="@id/yPosition"
+            android:layout_alignParentEnd="true"
+            android:entries="@array/directions"
+            android:autofillHints="" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/commands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setCarPosition"
+        android:hint="@string/enter_commands"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/buttonCalculate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/commands"
+        app:layout_constraintEnd_toEndOf="@id/commands"
+        app:layout_constraintTop_toBottomOf="@id/commands"
+        android:text="@string/calculate_position"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/resultsTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/buttonCalculate1"
+        app:layout_constraintEnd_toEndOf="@id/buttonCalculate1"
+        app:layout_constraintTop_toBottomOf="@id/buttonCalculate1"
+        android:text="@string/car_is_at_position"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/positionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/resultsTitle1"
+        app:layout_constraintEnd_toEndOf="@id/resultsTitle1"
+        app:layout_constraintTop_toBottomOf="@id/resultsTitle1"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

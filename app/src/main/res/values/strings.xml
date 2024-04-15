@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Auto Driving Car</string>
+    <string name="set_field_dimensions">Set field dimensions:</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="set_car_s_starting_point">Set car\'s starting point:</string>
+    <string name="x_position">x-position</string>
+    <string name="y_position">y-position</string>
+    <string name="direction">Direction</string>
+    <string name="enter_commands">Enter commands</string>
+    <string name="calculate_position">Calculate position</string>
+    <string name="car_is_at_position">Car is at position:</string>
+    <string name="starting_point_of_car_a">Starting point of Car A:</string>
+    <string name="starting_point_of_car_b">Starting point of Car B:</string>
+    <string name="calculate_collision">Calculate collision</string>
+    <string name="collision_at_position">Collision at position:</string>
+    <string name="part_1">Part 1</string>
+    <string name="part_2">Part 2</string>
+    <string-array name="directions">
+        <item>N</item>
+        <item>S</item>
+        <item>E</item>
+        <item>W</item>
+    </string-array>
+</resources>

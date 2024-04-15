@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Part2Activity"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/btnBackToMain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/baseline_chevron_left_24"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/part2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBackToMain2"
+        android:text="@string/part_2"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/setFieldSize2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/part2_title"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/fieldTitle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_field_dimensions"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/setWidth2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fieldTitle2"
+            android:hint="@string/width"
+            android:ems="7"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/setHeight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fieldTitle2"
+            android:layout_alignParentEnd="true"
+            android:ems="7"
+            android:hint="@string/height"
+            android:inputType="number"
+            android:autofillHints="" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setCarAPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setFieldSize2">
+
+        <TextView
+            android:id="@+id/positionTitleCarA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/starting_point_of_car_a"
+            android:textStyle="bold"
+            android:textSize="20sp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/xPositionCarA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitleCarA"
+            android:hint="@string/x_position"
+            android:ems="5"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/yPositionCarA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitleCarA"
+            android:layout_toEndOf="@id/xPositionCarA"
+            android:layout_toStartOf="@id/directionCarA"
+            android:ems="5"
+            android:hint="@string/y_position"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <Spinner
+            android:id="@+id/directionCarA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitleCarA"
+            android:layout_alignBottom="@id/yPositionCarA"
+            android:layout_alignParentEnd="true"
+            android:entries="@array/directions"
+            android:autofillHints="" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/commandsCarA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setCarAPosition"
+        android:hint="@string/enter_commands"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <RelativeLayout
+        android:id="@+id/setCarBPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commandsCarA">
+
+        <TextView
+            android:id="@+id/positionTitleCarB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/starting_point_of_car_b"
+            android:textStyle="bold"
+            android:textSize="20sp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/xPositionCarB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitleCarB"
+            android:hint="@string/x_position"
+            android:ems="5"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/yPositionCarB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitleCarB"
+            android:layout_toEndOf="@id/xPositionCarB"
+            android:layout_toStartOf="@id/directionCarB"
+            android:ems="5"
+            android:hint="@string/y_position"
+            android:inputType="number"
+            android:autofillHints="" />
+
+        <Spinner
+            android:id="@+id/directionCarB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/positionTitleCarB"
+            android:layout_alignBottom="@id/yPositionCarB"
+            android:layout_alignParentEnd="true"
+            android:entries="@array/directions"
+            android:autofillHints="" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/commandsCarB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setCarBPosition"
+        android:hint="@string/enter_commands"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/buttonCalculate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/commandsCarB"
+        app:layout_constraintEnd_toEndOf="@id/commandsCarB"
+        app:layout_constraintTop_toBottomOf="@id/commandsCarB"
+        android:text="@string/calculate_collision"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/resultsTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/buttonCalculate2"
+        app:layout_constraintEnd_toEndOf="@id/buttonCalculate2"
+        app:layout_constraintTop_toBottomOf="@id/buttonCalculate2"
+        android:text="@string/collision_at_position"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/collisionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/resultsTitle2"
+        app:layout_constraintEnd_toEndOf="@id/resultsTitle2"
+        app:layout_constraintTop_toBottomOf="@id/resultsTitle2"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
